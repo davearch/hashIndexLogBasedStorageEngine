@@ -65,6 +65,16 @@ Now you can start the project:
 * C++17 or later
 * A modern Linux, macOS, or Windows system.
 
+### Todo
+* write compaction strategy abstract class implementations:
+  - [ ] Leveled compaction
+  - [ ] Tiered compaction
+  - [ ] Time window compaction
+* write test cases
+* write server API
+* load test and compare with production systems
+ 
+
 ### Contact
 If you have any questions, issues or want to contribute, feel free to reach out or create
 a pull request
