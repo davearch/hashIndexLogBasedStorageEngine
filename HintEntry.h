@@ -13,6 +13,7 @@ struct HintEntry {
     std::string file_id;
     uint16_t value_size;
     long value_pos;
+    uint32_t timestamp;
 };
 
 
