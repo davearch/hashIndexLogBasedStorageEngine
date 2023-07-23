@@ -9,23 +9,27 @@
 #include <mutex>
 #include <fstream>
 #include <json.hpp>
+#include "BitcaskEntry.h"
 
 using json = nlohmann::json;
 
 class LogFile {
 public:
-    explicit LogFile(std::string filename);
-    ~LogFile(); // destructor
+    explicit LogFile(const std::filesystem::path& file);
+    ~LogFile();
     LogFile(const LogFile& other) = delete; // copy constructor
-    void write(const std::string& key, const json& value);
+    BitcaskEntry write(const std::string& key, const json& value);
     std::string read(long offset);
     void close();
     LogFile& operator=(const LogFile& other) = delete; // copy assignment operator
     std::string get_filename() const;
+    long get_current_pos();
+    std::filesystem::path get_path() const;
 private:
     std::string m_filename;
     std::fstream m_file;
     std::mutex m_mutex;
+    std::filesystem::path m_path;
 };
 
 #endif /* LOGFILE_H */
