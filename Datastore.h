@@ -28,10 +28,9 @@ private:
     bool file_exists(const std::string& path);
     void load_read_files();
     void load_index();
-
+    void load_current_write_file();
     std::shared_ptr<LogFile> current_write_file;
     std::string directory;
-    std::string write_file; // not needed?
     static std::unordered_map<std::string, HintEntry> shared_index;
     static std::shared_mutex global_write_lock;
     static std::shared_mutex shared_index_mutex;
