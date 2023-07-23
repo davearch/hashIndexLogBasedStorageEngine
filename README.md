@@ -67,8 +67,14 @@ Now you can start the project:
 
 ### Todo
 * write compaction algorithm
-* write test cases
+* write a lot of test cases
+* add configuration options
+* add logging
+* write better documentation
+* write better error handling
+* come up with better file_id scheme
 * write server API
+* clean up code in general, make it more readable and maintainable
 * load test and compare with production systems
  
 
