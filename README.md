@@ -66,10 +66,7 @@ Now you can start the project:
 * A modern Linux, macOS, or Windows system.
 
 ### Todo
-* write compaction strategy abstract class implementations:
-  - [ ] Leveled compaction
-  - [ ] Tiered compaction
-  - [ ] Time window compaction
+* write compaction algorithm
 * write test cases
 * write server API
 * load test and compare with production systems
